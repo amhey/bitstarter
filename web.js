@@ -1,9 +1,10 @@
 var express = require('express');
 
 var app = express.createServer(express.logger());
+var filecontent = "This is in my file";
 
 app.get('/', function(request, response) {
-  response.send('Hello World 2!');
+  response.send(filecontent);
 });
 
 var port = process.env.PORT || 5000;
