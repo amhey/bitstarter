@@ -1,7 +1,10 @@
 var express = require('express');
 
 var app = express.createServer(express.logger());
-var filecontent = "This is in my file";
+
+//This is the file reading section
+var filetoread="index.html";
+var filecontent = fs.readFileSync(index.html,"utf8");
 
 app.get('/', function(request, response) {
   response.send(filecontent);
