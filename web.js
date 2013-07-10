@@ -4,7 +4,7 @@ var app = express.createServer(express.logger());
 
 //This is the file reading section
 var filetoread="index.html";
-var filecontent = fs.readFileSync(index.html,"utf8");
+var filecontent = fs.readFileSync(filetoread,"utf8");
 
 app.get('/', function(request, response) {
   response.send(filecontent);
