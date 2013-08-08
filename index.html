@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8">
+<html lang="en">
+<head>
+<meta charset="utf-8">
 <!-- The width property controls the size of the viewport, initial-scale gives the zoom level when first loaded -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Angela Hey's Bitstarter For Stanford Coursera Startup Engineering Class</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Incviser - A Company Analysis App For Stanford Coursera Startup Engineering Class</title>
 <!-- Do the stylesheets -->
 <!-- Bootstrap Stylesheet-  we'll use the non-min version so we can read the file -->
 <link type="text/css" rel="stylesheet" href="http://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
@@ -18,9 +20,11 @@
   <style type="text/css">
   /*For a large screen */
   @media (min-width:980px) {
-  body { padding-top: 60px;/* padding-bottom: 40px; */ }
+  body{padding-top:110px;}
   .linediv-l { border-right: 1px #E6FF54 solid; }
   .linediv-r { border-left: 1px #E6FF54 solid; }
+    /* For screens */
+  .container { width: 960px;}
   }
   
   /* Landscape phones and smaller */
@@ -28,9 +32,9 @@
   .copy { padding: 2.5% 10%; }
   .linediv-l { border-bottom: 1px #E6FF54 solid; }
   .linediv-r { border-top: 1px #E6FF54 solid; }
+  .container { width: 100%; }
   }
-  /* For screens */
-  .container { width: 960px; }
+
   /* For all sizes */
   /* Set main body styles */
   body {
@@ -40,24 +44,27 @@
   .heading, .subheading {
     font-family: "Ubuntu", Trebuchet, Helvetica, Arial, sans-serif;
     text-align: center;
-    color:#0F3054;
+    color:#000;
     }
   p.lead {
     padding-top: 1.5%;
     font-size:140%;
+    font-weight:bold
     line-height:150%; 
     }
   p {
-    font-size:medium
-    line-height:100%; 
+    font-size:large;
+    line-height:150%; 
     }
   /*Video Pitch And Action */
   .pitch {
-    padding:2.5% 0%;
+    padding:3% 0%;
+    background-color: #000;
   }
   .order {
     padding:2% 0%;
   }
+
   .actions {
     padding:3% 0%;
     background-color: #1967BF;
@@ -73,6 +80,7 @@
     padding-top: 2.5%;
     padding-bottom: 2.5%;
     text-align: justify;
+    font-size:large;
   }
   .asset {
     padding: 2.5% 0%;
@@ -88,27 +96,34 @@
   .footer a{
     color: #E6FF54;
   }
+  .headpartcol { color: #dd514c; }
+   div.addthis_toolbox 
+   {
+  width:100%;
+  margin: 0 auto;
+ }
   </style>
 </head>
 <!--Starting body - really should put CSS in CSS file!-->
 <body> 
 <!-- Mobile friendly navbar from example. --> 
-<div class="navbar navbar-inverse navbar-fixed-top"> 
+
+<div class="navbar navbar-inverse navbar-fixed-top" >
   <div class="navbar-inner"> 
-    <div class="container" style="background-color:#0F3054;"> 
-    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> 
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span> 
-    </button> 
-    <a class="brand" href="#">Bitstarter</a> 
-      <div class="nav-collapse collapse"> 
-        <ul class="nav"> 
-        <li class="active"><a href="#">Home</a></li> 
-        <li><a href="Sample_Google.html">Sample</a></li> 
-        <li><a href="#contact">Game</a></li> 
-        <li><a href="#about">About</a></li> 
-        <li><a href="#contact">Contact</a></li> 
+    <div class="container" style="background-color: #1967BF;"> 
+      <div class=logo><a href="#"><img src="http://www.techviser.com/images/Logo_1inHigh.png" alt="Techviser - A Silicon Valley Technology Strategy Consulting Firm" height="72" /></a>
+      </div>
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> 
+          <span class="icon-bar" ><!--<a href="#" style="color:#E6FF54;">Home</a>--></span>
+          <span class="icon-bar" style="color:#E6FF54;"><!--About--></span>
+          <span class="icon-bar" style="color:#E6FF54;"><!--Contact--></span> 
+      </button>
+      <div class="nav-collapse collapse">
+        <ul class="nav"  > 
+          <li class="active" ><a href="#" style="color:#E6FF54;">Home</a></li> 
+          <li><a href="Sample_Google.html">Sample</a></li> 
+          <li><a href="#about">About</a></li> 
+          <li><a href="#contact">Contact</a></li> 
         </ul> 
       </div> <!--/.nav-collapse --> 
     </div> 
@@ -116,23 +131,19 @@
 </div> 
 <!-- Start the container with row-fluid to make it resizable-->
 <div class="container"> 
-  <div class="row-fluid"> 
-    <div class="span4 logo"> 
-    <!--	 I am putting my company logo here --> 
-    <img src="http://www.techviser.com/images/Logo_1inHigh.png" alt="Techviser Logo"/> 
-    </div> 
+  <div class="row-fluid">  
     <div class="span8 blank"></div> 
   </div> 
   <!--Heading Section -->
   <div class="row-fluid heading"> 
     <div class="span12"> 
-      <h1>Inc. Info</h1>
+      <h1>Inc<span class="headpartcol">viser</span></h1>
     </div> 
   </div> 
   <!--Sub-heading Section -->
   <div class="row-fluid subheading"> 
     <div class="span12"> 
-    <p class="lead">Instant Company News&nbsp;And Financials</p> 
+      <p class="lead">Technology Company News</p> 
     </div> 
   </div> 
   <!--Pitch Section -->
@@ -140,20 +151,27 @@
     <!--Video Pitch Section --> 
   <div class="span5 offset1 video">
 <video width="400" height="300" controls>
-  <source src="assets/videos/SalesPitch.mp4" type="video/mp4">
-  <source src="assets/videos/SalesPitch.mov" type="video/mov">
-  <source src="assets/videos/SalesPitch.3gp" type="video/3gp">
+  <source src="http://incviser.amhey.com/assets/videos/Incviser.mp4" type="video/mp4">
+  <source src="http://incviser.amhey.com/assets/videos/Incviser3.mp4" type="video/mp4">
+  <!--<source src="http://incviser.amhey.com/assets/videos/Incviser.mov" type="video/mov">
+  <source src="http://incviser.amhey.com/assets/videos/Incviser.m4v" type="video/m4v">
+  <source src="http://incviser.amhey.com/assets/videos/Incviser.wmv" type="video/wmv">-->
+Your browser does not support the video tag - you may watch it on YouTube at youtu.be/qfXrq1RajwQ
 <!--  <source src="movie.ogg" type="video/ogg">
-  <source src="movie.webm" type="video/webm"> -->
+  <source src="movie.webm" type="video/webm">
   <object data="assets/videos/SalesPitch.mp4" width="400" height="300">
   </object> 
-</video>
+    <!--<object data=" http://youtu.be/SdntrFWhEE8" width="400" height="268">
+      </object>  -->
+      <iframe width="480" height="360" src="//www.youtube.com/embed/Igos1SzYKB0" frameborder="0" allowfullscreen></iframe>-->
+    </video>
   </div>
     <!--Actions Div To Hold Scores In Pitch Section -->
-    <div class="span5 actions">
+  <div class="span5 actions">
+    <div class="row-fluid">
 <!-- Define a new 12 column grid within a grid -->
       <div class="span8 offset2">
-        <div class="statistics">
+        <div class="row-fluid statistics">
           <div class="span4">
           <!-- linediv-l and linediv-r look different in horizontal and vertical layouts -->
             <div class="linediv-l">
@@ -164,7 +182,7 @@
           <div class="span4">
             <div class="linediv-c">
               <h3>$1000</h3>
-              <p>Of $5000</p>            
+              <p>of $5000</p>            
             </div>
           </div>
           <div class="span4">
@@ -174,42 +192,57 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="span10 offset1">
-      <!-- Bootstrap Progress Bar -->
-        <div class="thermometer progress active"> 
-        <!--see http://jsfiddle.net/GeekyJohn/UpnKF/ -->
-          <div class="bar bar-success" style="width:20%;"></div>
-          <div class="bar bar-warning" style="width:60%;"></div>
-          <div class="bar bar-danger" style="width:20%;"></div> 
+      </div> <!--End of row-fluid -->
+      <div class="row-fluid">
+        <div class="span10 offset1">
+        <!-- Bootstrap Progress Bar -->
+          <div class="thermometer progress active"> 
+          <!--see http://jsfiddle.net/GeekyJohn/UpnKF/ -->
+            <div class="bar bar-success" style="width:20%;"></div>
+            <div class="bar bar-warning" style="width:60%;"></div>
+            <div class="bar bar-danger" style="width:20%;"></div> 
+          </div>
         </div>
-      </div>
+       </div> 
       <div class="span6 offset3 order">
       <!-- Standard Bootstrap Buttons -->
-        <button class="btn btn-success btn-large">Donate Now!</button>
+        <a class="coinbase-button" data-code="f544e88b028fe7f8762a7b66cf753c7e" data-button-style="donation_large" href="https://coinbase.com/checkouts/f544e88b028fe7f8762a7b66cf753c7e">Donate Bitcoins</a><script src="https://coinbase.com/assets/button.js" type="text/javascript"></script>
       </div>
+    </div>
+    <div class="row-fluid">
       <div class="span8 offset2 social">
-      <!-- Social Buttons are Not Part of Standard Bootstrap - This Seems Weird Way To Do Them For Me-->
-        <button class="btn btn-twitter"><i class="icon-twitter"> | Twitter</i></button>
-        <button class="btn btn-facebook"><i class="icon-facebook"> | Facebook</i></button>
+<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+<a class="addthis_button_preferred_1"></a>
+<a class="addthis_button_preferred_2"></a>
+<a class="addthis_button_preferred_3"></a>
+<a class="addthis_button_preferred_4"></a>
+<a class="addthis_button_compact"></a>
+<a class="addthis_counter addthis_bubble_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4ec17e2412989900"></script>
+<!-- AddThis Button END -->
       </div>
     </div>
   </div>
+</div>
+</div>
   <!-- Start Marketing Copy -->
   <div class="row-fluid section1">
     <div class="span5 offset1 asset">
-    <img class="img-polaroid" src="assets/images/Screen.jpg" alt="Screen shot of the Inc. Info App">
+    <img class="img-polaroid" src="http://incviser.amhey.com/assets/images/Screen.jpg" alt="Screen shot of the Inc. Info App">
     </div>
     <div class="span5 copy">
-    <p>Inc.Info tells you what's going on with top companies. Initially we will focus on 10 tech companies. We aim to raise $1000 in the next 5 weeks. Here are the rewards for our donors:
-    <ul><li>$500 - complementary review and critique of your company's strategy by Techviser's consultants</li><li>$100 - 1 week of banner advertising on our site</li><li>$50 - a public company of your choosing will be added</li><li>$10 - early access to beta software</li></ul></p></div>
+    <p>Incviser gives you the latest corporate news and financial information. Initially we will focus on tech companies. We aim to raise $1000 in the next 5 weeks. Here are the rewards for our donors:
+    <ul><li>$500 - review and critique of your company's strategy by Techviser</li><li>$100 - 1 week of banner advertising on this site</li><li>$50 - a public company of your choosing will be added</li><li>$10 - opportunity to review the Incviser app before general release</li><li>a Like, Tweet or Share - we'll Like or Tweet you back</li></ul><p></p></div>
   </div>
   <div class="row-fluid section2">
     <div class="span5 offset1 copy copy-right">
     <p>Techviser is a Silicon Valley management consulting firm that combines technical know-how with marketing expertise. We help visionaries turn technology into businesses.</p> <p>Use our software  to get company news fast. </p><p>Techviser advises venture investors, startup CEOs and corporate executives.</p>
     </div>
     <div class="span5 asset">
-    <img class="img-polaroid" src="assets/images/Angela.png" alt="Angela Hey">
+    <img class="img-polaroid" src="assets/images/Benefits.jpg" alt="Incviser helps journalists, investors, analysts and job seekers find out about companies in real time.">
     </div>
  </div>
  <div class="row-fluid faq">
@@ -219,24 +252,24 @@
         <div class="accordion-group">
           <div class="accordion-heading">
             <a class="accordion-toggle" data-toggle="collapse" data-parent="accordion2" href="#collapseOne">
-            What is a FAQ?
+            Which companies will you be covering?
             </a>
           </div>
           <div id="collapseOne" class="accordion-body collapse">
             <div class="accordion-inner">
-            A FAQ is a Frequently Asked Question.
+            Initially we plan to cover Apple, AT&T, Cisco, Facebook, Google, HP, IBM, Intel,Intuit, Microsoft, Nvidia, Oracle, Symantec, Verizon, Yahoo!
             </div>
           </div>
         </div>
         <div class="accordion-group">
           <div class="accordion-heading">
             <a class="accordion-toggle" data-toggle="collapse" data-parent="accordion2" href="#collapseTwo">
-            What is a Frequently Asked Question?
+            How often do you update your data?
             </a>
           </div>
           <div id="collapseTwo" class="accordion-body collapse">
             <div class="accordion-inner">
-            It's a question that many users might ask - so we put the answers here.
+            The data is updated automatically by the companies and people that write about them.
             </div>
           </div>
         </div>        
@@ -251,6 +284,15 @@
       </p>
     </div>
   </div>
-</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-33747261-2', 'incviser.com');
+  ga('send', 'pageview');
+
+</script>
 </body>
 </html>
